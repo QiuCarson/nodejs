@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="shortcut icon" href="http://static.phpsong.com/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://static.phpsong.com/icon-144x144.png">
+<meta name="applicable-device"content="pc,mobile">
+<title><%= option.blogname %><%= option.blogdescription %></title>
+<script>window._deel = { name: '<%= option.blogname %>', url: 'http://www.phpsong.com/wp-content/themes/xiaosong', rss: 'http://www.phpsong.com/feed', ajaxpager: 'on', maillist: '', maillistCode: 'http://list.qq.com/cgi-bin/qf_invite?id=af4543ea6636fc6676ac03de91297ee4ee40b8a99265a0f7', commenton: 0, roll: [6,6], tougaoContentmin: 200, tougaoContentmax: 5000, appkey: { tqq: '801494063', tsina: '814121321', t163: '', tsohu: '' }}</script>
+<link rel='stylesheet' id='style-css' href='http://css.phpsong.com/wp-content/themes/xiaosong/style.css?ver=3.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://css.phpsong.com/wp-content/themes/xiaosong/js/jquery.js?ver=3.0'></script>
+<meta name="keywords" content="<%= option.d_keywords %>">
+<meta name="description" content="<%= option.d_description %>">
+<style>
+.article-content {
+    font-size: 16px;
+    line-height:180%;
+}
+}
+@media (max-width:640px) {
+.article-content {
+font-size:16px
+}
+}
+</style>
+<!--[if lt IE 9]><script src="http://static.phpsong.com/wp-content/themes/xiaosong/js/html5.js"></script><![endif]-->
+</head>
+<body class="home blog">
+<div class="navbar-wrap">
+  <div class="navbar">
+    <h1 class="logo"><a href="http://www.phpsong.com" title="<%= option.blogname %>-<%= option.blogdescription %>">小松博客</a></h1>
+    <ul class="nav">
+      <li id="menu-item-1591" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1591"><a href="http://www.phpsong.com">首页</a></li>
+      <li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8"><a href="http://www.phpsong.com/wangzhan">网站建设</a>
+        <ul class="sub-menu">
+          <li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-9"><a href="http://www.phpsong.com/wangzhan/apache">Apache</a></li>
+          <li id="menu-item-10" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10"><a href="http://www.phpsong.com/wangzhan/linuxs">Linux</a></li>
+          <li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="http://www.phpsong.com/wangzhan/mysql">MYSQL</a></li>
+          <li id="menu-item-12" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12"><a href="http://www.phpsong.com/wangzhan/nginx">Nginx</a></li>
+          <li id="menu-item-13" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13"><a href="http://www.phpsong.com/wangzhan/php">PHP</a></li>
+          <li id="menu-item-14" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14"><a href="http://www.phpsong.com/wangzhan/qianduan">前端技术</a></li>
+          <li id="menu-item-15" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15"><a href="http://www.phpsong.com/wangzhan/svn">版本控制</a></li>
+        </ul>
+      </li>
+      <li id="menu-item-6" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6"><a href="http://www.phpsong.com/framework">开源框架</a></li>
+      <li id="menu-item-7" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7"><a href="http://www.phpsong.com/wordpress">wordpress</a></li>
+      <li id="menu-item-5" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5"><a href="http://www.phpsong.com/other">其他分享</a></li>
+      <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="http://www.phpsong.com/guestbook">留下脚印</a></li>
+    </ul>
+    <div class="screen-mini">
+      <button data-type="screen-nav" class="btn btn-inverse screen-nav"><i class="icon-tasks icon-white"></i></button>
+    </div>
+    <div class="menu pull-right">
+      <form method="get" class="dropdown search-form" action="http://www.phpsong.com/" >
+        <input class="search-input" name="s" type="text" placeholder="输入关键字搜索" x-webkit-speech="" id="search_key_val">
+        <input class="btn btn-success search-submit" type="submit" value="搜索" onclick="return search_key();">
+        <script>function search_key(){ var value_key=$("#search_key_val").val(); if(value_key){ window.open("http://www.phpsong.com/search/"+value_key+"/");return false; } return true; }</script>
+        <ul class="dropdown-menu search-suggest">
+        </ul>
+      </form>
+      <div class="btn-group pull-left">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#feed">订阅</button>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="header">
+  <div class="speedbar">
+    <div class="toptip"><strong class="text-success">最新消息：</strong><%= option.d_tui %></div>
+  </div>
+</header>
+<section class="container">
+  <div class="content-wrap">
+    <div class="content">
+      <div class="sticky">
+        <h2 class="title">置顶推荐</h2>
+        <ul>
+       
+          <li class="item"><a href="http://www.phpsong.com/1915.html"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015122308522566251-220x150.png" alt="wordpress 4.4 禁用2个不需要的功能" />
+            <h3>wordpress 4.4 禁用2个不需要的功能</h3>
+            <p class="muted">今天无意中发现wordpress4.4升级之后，有新的功能会体现在页面的源代码中①禁用Wor...</p>
+            </a></li>
+         
+        </ul>
+      </div>
+      <h2 class="title">最新发布</h2>
+      <article class="excerpt"> <span class="new-icon">最新</span>
+        <div class="focus"><a href="http://www.phpsong.com/1915.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015122308522566251-220x150.png" alt="wordpress 4.4 禁用2个不需要的功能" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/wordpress">wordpress<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1915.html" title="wordpress 4.4 禁用2个不需要的功能 - 小松博客">wordpress 4.4 禁用2个不需要的功能</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 12分钟前</span> <span class="muted"><i class="icon-eye-open icon12"></i> 0浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1915.html#respond">0评论</a></span></p>
+        <p class="note"> 今天无意中发现wordpress4.4升级之后，有新的功能会体现在页面的源代码中①禁用WordPress 4.4新增REST API功能WordPress 4.4新增了REST API功能，之前早就知道，但是没有想到体现到了源代码中在页面的h... </p>
+      </article>
+      <article class="excerpt"> <span class="new-icon">最新</span>
+        <div class="focus"><a href="http://www.phpsong.com/1879.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015122206163799550-220x150.png" alt="nodejs安装和第一个程序" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/wangzhan/qianduan">前端技术<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1879.html" title="nodejs安装和第一个程序 - 小松博客">nodejs安装和第一个程序</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 1天前</span> <span class="muted"><i class="icon-eye-open icon12"></i> 13浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1879.html#respond">0评论</a></span></p>
+        <p class="note"> nodejs的安装就非常简单windows下一直下面一步，linux下面也是一般的安装软件的方法，但是安装好之后要检查一下是否安装成功看截图上面看到我检查了npm,那什么是npm？npm是一个node包管理和分发工具，已经成为了非官方的发布... </p>
+      </article>
+      <article class="excerpt"> <span class="new-icon">最新</span>
+        <div class="focus"><a href="http://www.phpsong.com/1876.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015122101564881547-220x150.jpg" alt="什么是nodejs" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/wangzhan/qianduan">前端技术<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1876.html" title="什么是nodejs - 小松博客">什么是nodejs</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 2天前</span> <span class="muted"><i class="icon-eye-open icon12"></i> 10浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1876.html#comments">1评论</a></span></p>
+        <p class="note"> 最近想开始学习nodejs，首先了解一下什么是nodejs。Node.js 不是一种独立的语言，Node.js 也不是一个 JavaScript 框架，。Node.js 是一个让 JavaScript 运行在服务端的开发平台。大家知道之前的Ja... </p>
+      </article>
+      <article class="excerpt"> <span class="new-icon">最新</span>
+        <div class="focus"><a href="http://www.phpsong.com/1870.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015121215090742230.jpg" alt="git 分支管理命令" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/wangzhan/svn">版本控制<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1870.html" title="git 分支管理命令 - 小松博客">git 分支管理命令</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 3天前</span> <span class="muted"><i class="icon-eye-open icon12"></i> 12浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1870.html#respond">0评论</a></span></p>
+        <p class="note"> 最近做的项目有点淡疼，分支老是被合并然后代码回滚，搞得写好的代码又要重新搞，昨天又遇到了，不知道分支这里谁管的，搞得这么混乱，今天一大早就听到同事在抱怨下面来讲一下git分支的一下命令git checkout -b phpsong 【本地创建并... </p>
+      </article>
+      <article class="excerpt">
+        <div class="focus"><a href="http://www.phpsong.com/1872.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015121701461732162-220x150.png" alt="升级wordpress4.4被修改了配置" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/wordpress">wordpress<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1872.html" title="升级wordpress4.4被修改了配置 - 小松博客">升级wordpress4.4被修改了配置</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 4天前</span> <span class="muted"><i class="icon-eye-open icon12"></i> 18浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1872.html#respond">0评论</a></span></p>
+        <p class="note"> 最近发现网站没有什么地方可以改进了，国际互联网大会没有邀请我，一定是我的网站不够好，明天还是继续上班，想了几天也没有什么要改进的地方今天早上发现我的admin@phpsong.com邮件收到垃圾评论的邮件，赶紧查了一下网站是不是有漏洞了，最近只做了... </p>
+      </article>
+      <article class="excerpt">
+        <div class="focus"><a href="http://www.phpsong.com/1860.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015121406040023582-220x62.png" alt="使用git push 提示错误" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/wangzhan/svn">版本控制<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1860.html" title="使用git push 提示错误 - 小松博客">使用git push 提示错误</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 6天前</span> <span class="muted"><i class="icon-eye-open icon12"></i> 21浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1860.html#respond">0评论</a></span></p>
+        <p class="note"> 在使用git的提交的时候发现一个错误，即git push的时候提示如截图所示的错误于是每次都需要执行git push origin &lt;分支名&gt;非常麻烦，今天又空来处理一下这个问题git config --global push.... </p>
+      </article>
+      <article class="excerpt">
+        <div class="focus"><a href="http://www.phpsong.com/1854.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015121401453124698-220x150.png" alt="chrome接口调试插件postman" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/other">其他分享<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1854.html" title="chrome接口调试插件postman - 小松博客">chrome接口调试插件postman</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 1周前 (12-17)</span> <span class="muted"><i class="icon-eye-open icon12"></i> 25浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1854.html#comments">1评论</a></span></p>
+        <p class="note"> 这星期要开发一功能而且是在后端，都需要用户登录而且是以接口的方式访问数据的，我这里要返回一个json的数据类型给前端如果是get的方式获取数据的话，就没有什么问题，直接在游览器里数据json类型的数据，就看起来麻烦一点但是如果是添加数据的话就麻烦... </p>
+      </article>
+      <article class="excerpt">
+        <div class="focus"><a href="http://www.phpsong.com/1867.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015121502193074594-220x150.jpg" alt="apache虚拟主机配置" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/wangzhan/apache">Apache<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1867.html" title="apache虚拟主机配置 - 小松博客">apache虚拟主机配置</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 1周前 (12-16)</span> <span class="muted"><i class="icon-eye-open icon12"></i> 22浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1867.html#comments">1评论</a></span></p>
+        <p class="note"> 我发现周围同事都在配置虚拟主机的时候都喜欢配置在httpd.conf,在上海公司的标准环境里也都是这么搞得,其实apache给我们提供了配置的一个文件下面来操作一下①查看使用虚拟主要使用配置文件开启apache 配置文件httpd.conf，... </p>
+      </article>
+      <article class="excerpt">
+        <div class="focus"><a href="http://www.phpsong.com/1848.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015121215090742230-220x150.jpg" alt="git ssh两个账号设置" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/wangzhan/svn">版本控制<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1848.html" title="git ssh两个账号设置 - 小松博客">git ssh两个账号设置</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 1周前 (12-15)</span> <span class="muted"><i class="icon-eye-open icon12"></i> 28浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1848.html#comments">1评论</a></span></p>
+        <p class="note"> 最近在做git ssh的时候，一个是公司的账户另一个是github,怎么设置,如果还是按之前的方法生成ssh key就回被直接覆盖，于是上网百度了一下我拿两个github的账户来做演示①生成ssh密匙ssh-keygen -t rsa -C ... </p>
+      </article>
+      <article class="excerpt">
+        <div class="focus"><a href="http://www.phpsong.com/1851.html" class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015121223585695501-220x150.png" alt="邮件通过sendcloud api发邮件" /></a></div>
+        <header> <a class="label label-important" href="http://www.phpsong.com/wordpress">wordpress<i class="label-arrow"></i></a>
+          <h2><a href="http://www.phpsong.com/1851.html" title="邮件通过sendcloud api发邮件 - 小松博客">邮件通过sendcloud api发邮件</a></h2>
+        </header>
+        <p> <span class="muted"><i class="icon-time icon12"></i> 1周前 (12-14)</span> <span class="muted"><i class="icon-eye-open icon12"></i> 27浏览</span> <span class="muted"><i class="icon-comment icon12"></i> <a href="http://www.phpsong.com/1851.html#respond">0评论</a></span></p>
+        <p class="note"> 最近域名邮箱转到阿里云，又发现问题了，这个问题主要是被腾讯退信退信内容如下您发送的邮件被退回，相关信息如下：您发送的邮件被退回，相关信息如下： 发件人：admin@phpsong.com 主题：Hi，您在 [小松博客] 的留... </p>
+      </article>
+      <div class="pagination">
+        <ul>
+          <li class="prev-page"></li>
+          <li class="active"><span>1</span></li>
+          <li><a href='http://www.phpsong.com/page/2'>2</a></li>
+          <li><a href='http://www.phpsong.com/page/3'>3</a></li>
+          <li><a href='http://www.phpsong.com/page/4'>4</a></li>
+          <li><a href='http://www.phpsong.com/page/5'>5</a></li>
+          <li><span> ... </span></li>
+          <li class="next-page"><a href="http://www.phpsong.com/page/2" >下一页</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <aside class="sidebar">
+    <div class="widget d_textbanner"><a class="style02" href="http://www.phpsong.com/1645.html" target="_blank"><strong>小松推荐</strong>
+      <h2>wordpress代码插件</h2>
+      <p>一个基于 Google Code Prettify 实现的WordPress代码高亮插件,后台带代码插入功能，无须设置安装就可以使用，小松第一个正式插件，可以在官网或后台插件搜索WP-code-button</p>
+      </a></div>
+    <div class="widget widget_text">
+      <div class="textwidget">
+        <div style=" color:#333;padding:15px">如果有问题请联系小松，交换链接请在留下脚印里留言给我，欢迎转载，小松博客是原创博客，转载请保留版权<br/>
+          QQ：454213722(申请qq请说明来意)<br/>
+          邮箱：admin@phpsong.com <br/>
+          QQ群：<a href="http://jq.qq.com/?_wv=1027&amp;k=UcGd9q" rel="external nofollow" target="_blank"><img src="http://www.phpsong.com/group.png" alt="phpQQ群"></a><br/>
+          <span style="display:block;float:left;width:40px;margin-top:5px">微博：</span><span style="display:block;float:left;width:136px;margin-top:5px">
+          <wb:follow-button uid="1971298393" type="red_2" width="136" height="24" ></wb:follow-button>
+          </span>
+          <div style="clear:both"></div>
+        </div>
+      </div>
+    </div>
+    <div class="widget widget_text">
+      <div class="textwidget"><script type="text/javascript"> var cpro_id="u2102547"; (window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"336",rsi1:"280",pat:"17",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"1",adp:"1",ptt:"0",titFF:"",titFS:"14",rss2:"#000000",titSU:"0"}</script><script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script></div>
+    </div>
+    <div class="widget d_postlist">
+      <h3 class="widget_tit"><a class="btn btn-primary" href="http://www.phpsong.com/guidang">文章归类</a>文章推荐</h3>
+      <ul>
+        <li><a href="http://www.phpsong.com/875.html"><span class="thumbnail"><img src="http://www.phpsong.com/aliyun.gif" alt="网站换到了阿里云" /></span><span class="text">网站换到了阿里云</span><span class="muted">2015-06-19</span><span class="muted"></span></a></li>
+        <li><a href="http://www.phpsong.com/628.html"><span class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/04/2015040701391957943-220x150.png" alt="iPhone死机的解决方法" /></span><span class="text">iPhone死机的解决方法</span><span class="muted">2015-04-07</span><span class="muted">2评论</span></a></li>
+        <li><a href="http://www.phpsong.com/1040.html"><span class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/08/2015080406212633433-220x150.jpg" alt="php统计中文个数" /></span><span class="text">php统计中文个数</span><span class="muted">2015-08-04</span><span class="muted"></span></a></li>
+        <li><a href="http://www.phpsong.com/1510.html"><span class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/11/2015110201204440941-220x150.png" alt="百度cdn静态文件缓存出现520" /></span><span class="text">百度cdn静态文件缓存出现520</span><span class="muted">2015-11-02</span><span class="muted"></span></a></li>
+        <li><a href="http://www.phpsong.com/1860.html"><span class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/12/2015121406040023582-220x62.png" alt="使用git push 提示错误" /></span><span class="text">使用git push 提示错误</span><span class="muted">2015-12-18</span><span class="muted"></span></a></li>
+        <li><a href="http://www.phpsong.com/314.html"><span class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/02/2015020612553050853-220x69.png" alt="linux剔除其他用户" /></span><span class="text">linux剔除其他用户</span><span class="muted">2015-02-06</span><span class="muted"></span></a></li>
+        <li><a href="http://www.phpsong.com/567.html"><span class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/03/2015032612213097652-220x150.jpg" alt="小松wordpress微信公共平台接口插件上线了" /></span><span class="text">小松wordpress微信公共平台接口插件上线了</span><span class="muted">2015-03-26</span><span class="muted">1评论</span></a></li>
+        <li><a href="http://www.phpsong.com/525.html"><span class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/03/2015031811595489241-220x150.jpg" alt="PHP的autoLoad自动加载机制" /></span><span class="text">PHP的autoLoad自动加载机制</span><span class="muted">2015-03-18</span><span class="muted">2评论</span></a></li>
+        <li><a href="http://www.phpsong.com/559.html"><span class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/03/2015032412231623381-220x150.png" alt="VMware虚拟机里安装好CentOS ifconfig没有eth0" /></span><span class="text">VMware虚拟机里安装好CentOS ifconfig没有eth0</span><span class="muted">2015-03-24</span><span class="muted"></span></a></li>
+        <li><a href="http://www.phpsong.com/1445.html"><span class="thumbnail"><img src="http://static.phpsong.com/wp-content/uploads/2015/10/2015102103100338334-220x150.jpg" alt="怎么判断mp3/音频文件加载完成" /></span><span class="text">怎么判断mp3/音频文件加载完成</span><span class="muted">2015-10-21</span><span class="muted">1评论</span></a></li>
+      </ul>
+    </div>
+    <div class="widget d_tag">
+      <h3 class="widget_tit"><a class="btn btn-primary" href="http://www.phpsong.com/tag">所有标签</a>标签</h3>
+      <div class="d_tags"><a href="http://www.phpsong.com/tag/oop%e6%80%9d%e6%83%b3">oop思想 (1)</a><a href="http://www.phpsong.com/tag/private-public-protected-%e6%9c%89%e4%bb%80%e4%b9%88%e5%b7%ae%e5%88%ab">private public protected 有什么差别 (1)</a><a href="http://www.phpsong.com/tag/session%e5%9b%9e%e6%94%b6%e6%9c%ba%e5%88%b6">session回收机制 (1)</a><a href="http://www.phpsong.com/tag/session%e9%94%81">session锁 (1)</a><a href="http://www.phpsong.com/tag/%e7%a8%8b%e5%ba%8f%e5%8d%a1%e9%a1%bf">程序卡顿 (1)</a><a href="http://www.phpsong.com/tag/%e8%a7%a3%e5%86%b3session%e9%94%81">解决session锁 (1)</a><a href="http://www.phpsong.com/tag/mysql%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96">mysql性能优化 (1)</a><a href="http://www.phpsong.com/tag/mysql%e7%93%b6%e9%a2%88">mysql瓶颈 (1)</a><a href="http://www.phpsong.com/tag/mysql%e9%85%8d%e7%bd%ae%e4%bc%98%e5%8c%96">mysql配置优化 (1)</a><a href="http://www.phpsong.com/tag/mysql%e5%91%bd%e4%bb%a4%e5%af%bc%e6%95%b0%e6%8d%ae">mysql命令导数据 (1)</a><a href="http://www.phpsong.com/tag/mysql%e5%91%bd%e4%bb%a4%e5%a4%87%e4%bb%bd">mysql命令备份 (1)</a><a href="http://www.phpsong.com/tag/mysql-sleep%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95">mysql sleep解决方法 (1)</a><a href="http://www.phpsong.com/tag/mysql-sleep%e8%bf%87%e5%a4%9a">mysql sleep过多 (1)</a><a href="http://www.phpsong.com/tag/jquery%e6%a1%86%e6%9e%b6">jquery框架 (1)</a><a href="http://www.phpsong.com/tag/jquery%e5%b8%b8%e7%94%a8%e6%96%b9%e6%b3%95">jquery常用方法 (1)</a><a href="http://www.phpsong.com/tag/jquery%e5%b8%b8%e7%94%a8%e5%87%bd%e6%95%b0">jquery常用函数 (1)</a><a href="http://www.phpsong.com/tag/%e6%97%b6%e9%97%b4%e6%8f%92%e4%bb%b6">时间插件 (1)</a><a href="http://www.phpsong.com/tag/%e6%97%b6%e5%88%86%e7%a7%92%e6%8f%92%e4%bb%b6">时分秒插件 (1)</a><a href="http://www.phpsong.com/tag/js%e6%97%b6%e5%88%86%e7%a7%92%e6%8e%a7%e4%bb%b6">js时分秒控件 (1)</a><a href="http://www.phpsong.com/tag/%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e%e4%bc%98%e5%8c%96">搜索引擎优化 (1)</a><a href="http://www.phpsong.com/tag/wordpress%e9%93%be%e6%8e%a5%e8%ae%be%e7%bd%ae">wordpress链接设置 (1)</a><a href="http://www.phpsong.com/tag/wordpress%e4%ba%8c%e7%bb%b4%e7%a0%81%e6%8f%92%e4%bb%b6">wordpress二维码插件 (1)</a><a href="http://www.phpsong.com/tag/%e4%ba%8c%e7%bb%b4%e7%a0%81api">二维码api (1)</a><a href="http://www.phpsong.com/tag/chrome%e7%bd%91%e9%a1%b5%e4%bf%9d%e5%ad%98%e5%9b%be%e7%89%87">chrome网页保存图片 (1)</a><a href="http://www.phpsong.com/tag/firefox%e9%a1%b5%e9%9d%a2%e4%bf%9d%e5%ad%98%e5%9b%be%e7%89%87">firefox页面保存图片 (1)</a><a href="http://www.phpsong.com/tag/safari%e9%a1%b5%e9%9d%a2%e4%bf%9d%e5%ad%98%e5%9b%be%e7%89%87">safari页面保存图片 (1)</a><a href="http://www.phpsong.com/tag/%e5%89%8d%e7%ab%af%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96">前端性能优化 (1)</a><a href="http://www.phpsong.com/tag/web%e5%89%8d%e7%ab%af%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96">web前端性能优化 (1)</a><a href="http://www.phpsong.com/tag/%e5%89%8d%e7%ab%af%e4%bb%a3%e7%a0%81%e4%bc%98%e5%8c%96">前端代码优化 (1)</a><a href="http://www.phpsong.com/tag/%e5%86%85%e5%ad%98%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f">内存文件系统 (1)</a></div>
+    </div>
+    <div class="widget d_comment">
+      <h3 class="widget_tit">最新评论</h3>
+      <ul>
+        <li><a href="http://www.phpsong.com/1876.html#comment-571" title="什么是nodejs上的评论"><img alt='' src='http://static.phpsong.com/avatar/eabc33e312320f721e2460460604bf66.png' class='avatar avatar-36 photo' height='36' width='36' />大前端 <span class="muted">1天前说：<br>
+          这给前端开拓了新高度</span></a></li>
+        <li><a href="http://www.phpsong.com/1848.html#comment-570" title="git ssh两个账号设置上的评论"><img alt='' src='http://static.phpsong.com/avatar/4cf16d92f370027a77c2167547a254a9.png' class='avatar avatar-36 photo' height='36' width='36' />FROYO <span class="muted">5天前说：<br>
+          学习一下</span></a></li>
+        <li><a href="http://www.phpsong.com/485.html#comment-566" title="一个值得学习ci的系统上的评论"><img alt='' src='http://static.phpsong.com/avatar/b0f0298e47628ee3de246d5daa996d37.png' class='avatar avatar-36 photo' height='36' width='36' />PHP博客 <span class="muted">6天前说：<br>
+          没有演示地址吗</span></a></li>
+        <li><a href="http://www.phpsong.com/1792.html#comment-565" title="博客服务器一键升级到php7上的评论"><img alt='' src='http://static.phpsong.com/avatar/671e225b2c41d4f6adf81ed6160cab07.png' class='avatar avatar-36 photo' height='36' width='36' />杉杉竹 <span class="muted">6天前说：<br>
+          不错的纯技术博客。技术的东西我是不太懂的呢</span></a></li>
+        <li><a href="http://www.phpsong.com/1854.html#comment-563" title="chrome接口调试插件postman上的评论"><img alt='' src='http://static.phpsong.com/avatar/70d1a9d251b3139ca8777e3d6b29078a.png' class='avatar avatar-36 photo' height='36' width='36' />通通学 <span class="muted">7天前说：<br>
+          不错，有用</span></a></li>
+        <li><a href="http://www.phpsong.com/1658.html#comment-561" title="博客互推联盟上线了上的评论"><img alt='' src='http://static.phpsong.com/avatar/2b1f00e3adab817fab743ea31297ce93.png' class='avatar avatar-36 photo' height='36' width='36' />起点博客 <span class="muted">7天前说：<br>
+          过来看看，现在网页端的blog看的人比较少，偏向技术的博客几乎么人</span></a></li>
+        <li><a href="http://www.phpsong.com/1645.html#comment-560" title="基于Google Code Prettify wordpress插件WP-code-button上的评论"><img alt='' src='http://static.phpsong.com/avatar/69ce4c387a577941c97d31cb09fb7778.png' class='avatar avatar-36 photo' height='36' width='36' />小左 <span class="muted">7天前说：<br>
+          这个看起来很棒，只是之前用别的插件插入的代码咋整</span></a></li>
+        <li><a href="http://www.phpsong.com/1867.html#comment-557" title="apache虚拟主机配置上的评论"><img alt='' src='http://static.phpsong.com/avatar/f28cc7e473b370441bcc69f757fc3732.png' class='avatar avatar-36 photo' height='36' width='36' />筛宝网 <span class="muted">7天前说：<br>
+          方法很对路。</span></a></li>
+      </ul>
+    </div>
+    <div class="widget widget_text">
+      <h3 class="widget_tit">友情链接</h3>
+      <div class="textwidget">
+        <ul style="padding: 12px 13px 10px 0px;" class="wailian">
+          <li><a href="http://www.ddhigh.com" target="_blank">每天进步一点点</a></li>
+          <li><a href="http://www.haorooms.com/" target="_blank">前端技术博客</a></li>
+          <li><a href="http://www.webyang.net/" target="_blank">AndyYang's Blog </a></li>
+          <li><a href="http://yedward.net" target="_blank">叶德华博客 </a></li>
+          <li><a href="http://www.vprol.com/" target="_blank">草根站长</a></li>
+          <li><a href="http://blog.m1910.com/" target="_blank">小左闲谈</a></li>
+          <li><a href="http://www.daimabiji.com" target="_blank">代码笔记</a></li>
+          <li><a href="http://blog.it985.com" target="_blank">IT985博客</a></li>
+          <li><a href="http://www.codetc.com/" target="_blank">codetc</a></li>
+          <li><a href="http://www.dmoz.org/search?q=www.phpsong.com" target="_blank" rel="external nofollow">DMOZ</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</section>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="copyright pull-left"> 版权所有，保留一切权利！ &copy; 2015 <a href="http://www.phpsong.com">小松博客</a> <a href="http://www.phpsong.com/sitemap.html" target="_blank">网站地图</a> <a href="http://www.phpsong.com/sitemap.xml" target="_blank">sitemap</a> </div>
+    <div class="trackcode pull-right">
+      <div style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254162409'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1254162409' type='text/javascript'%3E%3C/script%3E"));</script></div>
+      <!--安全---><span id="pinganVerify"></span><script type="text/javascript" src="http://apply.trustutn.org/show?type=2&sn=760151209019013400621"></script> </div>
+  </div>
+</footer>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+<!--压缩前的大小: 33257 bytes; 压缩后的大小: 32584 bytes; 节约：2.02% -->
