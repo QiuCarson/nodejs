@@ -1,0 +1,5 @@
+问题1、模板不能渲染两次，即  res.render不能有两个，不然就出错
+问题2、没有办法依赖查询，也就是我要查询1的结果查询2，var和return都拿不到值，不知道怎么处理了
+问题3、https://github.com/felixge/node-mysql#multiple-statement-queries 
+
+没有办法搞下去了
